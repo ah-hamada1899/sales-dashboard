@@ -30,7 +30,7 @@ export const SalesChart: React.FC<ChartProps> = ({ data, chartType }) => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
               <YAxis />
-              <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
+              <Tooltip formatter={(value) => `$${value?.toLocaleString()}`} />
               <Legend />
               <Bar dataKey="sales" fill="#8884d8" />
             </BarChart>
@@ -44,7 +44,7 @@ export const SalesChart: React.FC<ChartProps> = ({ data, chartType }) => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
               <YAxis />
-              <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
+              <Tooltip formatter={(value) => `$${value?.toLocaleString()}`} />
               <Legend />
               <Line type="monotone" dataKey="sales" stroke="#8884d8" strokeWidth={2} />
             </LineChart>
@@ -68,7 +68,7 @@ export const SalesChart: React.FC<ChartProps> = ({ data, chartType }) => {
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
-              <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
+              <Tooltip formatter={(value) => `$${value?.toLocaleString()}`} />
               <Legend />
             </PieChart>
           </ResponsiveContainer>

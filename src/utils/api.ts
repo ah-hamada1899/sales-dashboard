@@ -5,7 +5,7 @@ export const fetchSalesData = async (year: number): Promise<SalesData[]> => {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // You can replace this with a real API endpoint
+  // We can replace this with a real API endpoint
   // For demonstration, we're using mock data but with random variations
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   
