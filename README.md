@@ -11,6 +11,7 @@ An interactive sales dashboard built with Next.js 15, TypeScript, Tailwind CSS, 
 - **API Integration**: Toggle between mock data and simulated API data
 - **Responsive Design**: Fully responsive layout using Tailwind CSS
 - **Type Safety**: Full TypeScript support
+- **Dark Mode**: Buttom to change classes to activate dark mode them
 
 ## Tech Stack
 
@@ -24,19 +25,17 @@ An interactive sales dashboard built with Next.js 15, TypeScript, Tailwind CSS, 
 
 src/
  components/
-     atoms/ # Basic UI components (Button, Input, Select)
+     atoms/ # Basic UI components (Button, Input, Select,DarkModeToggle)
      molecules/ # Combined components (FilterBar, ChartControls)
      organisms/ # Complex components (SalesChart, SalesDashboard)
      templates/ # Page templates (DashboardTemplate)
+     contexts/ # context used (ThemeContext)
  app/ # Next.js app router pages
  types/ # TypeScript type definitions
  utils/ # Utility functions and API calls
  data/ # Mock data
 
 ## Setup Instructions
-
-
-
 ### Prerequisites
 
 - Node.js 18+ 
