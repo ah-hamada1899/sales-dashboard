@@ -32,7 +32,7 @@ export const ChartControls: React.FC<ChartControlsProps> = ({
   ];
 
   return (
-    <div className="flex gap-4 items-end bg-white p-4 rounded-lg shadow-sm">
+    <div className="flex gap-4 items-end bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
       <Select
         value={selectedYear}
         onChange={onYearChange}

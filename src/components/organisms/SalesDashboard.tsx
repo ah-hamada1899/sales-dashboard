@@ -60,7 +60,7 @@ export const SalesDashboard: React.FC = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="text-lg">Loading sales data...</div>
+        <div className="text-lg text-gray-900 dark:text-white">Loading sales data...</div>
       </div>
     );
   }
@@ -86,31 +86,31 @@ export const SalesDashboard: React.FC = () => {
       {filteredData.length > 0 ? (
         <SalesChart data={filteredData} chartType={chartType} />
       ) : (
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8 text-center">
-          <p className="text-yellow-800">
+        <div className="bg-yellow-50 dark:bg-yellow-900 border border-yellow-200 dark:border-yellow-700 rounded-lg p-8 text-center">
+          <p className="text-yellow-800 dark:text-yellow-200">
             No sales data found above ${threshold.toLocaleString()}
           </p>
         </div>
       )}
 
-      <div className="bg-gray-50 p-4 rounded-lg">
-        <h4 className="font-semibold mb-2">Summary Statistics</h4>
+      <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+        <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Summary Statistics</h4>
         <div className="grid grid-cols-3 gap-4">
           <div>
-            <p className="text-sm text-gray-600">Total Sales</p>
-            <p className="text-xl font-bold">
+            <p className="text-sm text-gray-600 dark:text-gray-400">Total Sales</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">
               ${filteredData.reduce((sum, item) => sum + item.sales, 0).toLocaleString()}
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-600">Average Monthly Sales</p>
-            <p className="text-xl font-bold">
+            <p className="text-sm text-gray-600 dark:text-gray-400">Average Monthly Sales</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">
               ${(filteredData.reduce((sum, item) => sum + item.sales, 0) / (filteredData.length || 1)).toLocaleString()}
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-600">Highest Month</p>
-            <p className="text-xl font-bold">
+            <p className="text-sm text-gray-600 dark:text-gray-400">Highest Month</p>
+            <p className="text-xl font-bold text-gray-900 dark:text-white">
               ${Math.max(...filteredData.map(item => item.sales), 0).toLocaleString()}
             </p>
           </div>

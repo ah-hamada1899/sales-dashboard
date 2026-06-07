@@ -16,7 +16,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onResetFilter,
 }) => {
   return (
-    <div className="flex gap-4 items-end bg-gray-50 p-4 rounded-lg">
+    <div className="flex gap-4 items-end bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
       <Input
         type="number"
         placeholder="Sales threshold"
